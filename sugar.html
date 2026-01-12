@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugar Cookies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+
+      <style>
+    body {
+      background-image: url('images/wallpp.jpg'); 
+      background-size: cover;      
+      background-position: center; 
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="logo">ChooChips Co.</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="baked.html">Freshly Baked</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="custom.html">Custom Orders</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+    <hr style="border: 0; border-top: 2px solid #8da082; width: 100%;">
+
+    <br><br><br><br>
+
+<section class="section-title3">
+    <h2>Love at First Bite</h2>
+</section>
+<section class="subtitle3">
+    <h3>Choose your</h3>
+</section>
+<section class="page-heading">
+    <h3>Sugar Cookie Box Size</h3>
+</section>
+
+<section class="cookiebox-selection">
+  <form id="cookieboxForm">
+    <div class="radio-row">
+      <label>
+        <input type="radio" name="cookiebox" value="6" data-size="6 Sugar Cookies" data-price="30">
+        6 Cookies ($19.50)
+      </label>
+      <label>
+        <input type="radio" name="cookiebox" value="8" data-size="8 Sugar Cookies" data-price="40">
+        8 Cookies ($26)
+      </label>
+      <label>
+        <input type="radio" name="cookiebox" value="12" data-size="12 Sugar Cookies" data-price="60">
+        12 Cookies ($39)
+      </label>
+      <label>
+        <input type="radio" name="cookiebox" value="24" data-size="24 Sugar Cookies" data-price="60">
+        24 Cookies ($78)
+      </label>
+    </div>
+  </form>
+</section>
+
+<section class="page-heading">
+    <h3>Cookie Base Flavours</h3>
+</section>
+
+<section class="cookiebox-selection">
+  <p id="summaryMsg" class="msg"></p>
+
+<div class="sugar-container">
+  <form id="sugarForm">
+    <div class="radio-row">
+
+      <label>
+        <input type="checkbox" name="sugar" value="Vanilla">
+        Vanilla
+        <input type="number" min="0" value="0">
+      </label>
+      <label>
+        <input type="checkbox" name="sugar" value="Strawberry White Chip">
+        Strawberry
+        <input type="number" min="0" value="0">
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="sugar" value="Chocolate">
+        Chocolate
+        <input type="number" min="0" value="0">
+      </label>
+      <label>
+        <input type="checkbox" name="sugar" value="Matcha">
+        Cinnamon Pumpkin Spice
+        <input type="number" min="0" value="0">
+      </label>
+
+      <div class="other-option-row">
+        <label>Other: 
+          <input type="text" name="other-sugar" placeholder="Lemon: 3, Gingerbread: 1">
+        </label>
+      </div>
+    </div>
+  </form>
+  </div>
+</section>
+
+<section class="page-heading">
+  <h3>Theme & Designs</h3>
+</section>
+
+<section class="cookiebox-selection">
+  <form id="themeForm">
+
+    <!-- Themes -->
+    <div class="radio-row">
+      <label>
+        <input type="radio" name="theme" value="special-event">
+        Special Event <span style="font-size: 0.9em;">(for 24+ cookies please request catering)</span>
+      </label>
+
+      <label>
+        <input type="radio" name="theme" value="enjoy-at-home">
+        Enjoy at Home
+      </label>
+
+      <label>
+        <input type="radio" name="theme" value="gifting">
+        Gifting
+      </label>
+    </div>
+
+    <!-- Themes Desc Box -->
+    <div class="other-option-row">
+      <label>Theme Details:
+        <input type="text" name="theme-details" placeholder="Birthday, Baby Shower, Graduation, etc." required>
+      </label>
+    </div>
+
+    <br>
+
+    <!-- Design -->
+    <div class="radio-row">
+      <label>
+        <input type="radio" name="design" value="minimal">
+        Minimal Design
+      </label>
+
+      <label>
+        <input type="radio" name="design" value="decorated">
+        Decorated 
+      </label>
+    </div>
+
+    <!-- Design Desc Box -->
+    <div class="other-option-row">
+      <label>Design Description:
+        <input type="text" name="design-description" placeholder="Describe your design and leave it to us!" required>
+      </label>
+    </div>
+
+  </form>
+</section>
+
+
+
+  <div class="button-row">
+    <a href="custom.html" class="back-btn">☚Back</a>
+     <a href="checkout.html" class="order-btn" id="letsOrderBtn">Let's Order!☛</a>
+  </div>
+
+  <!-- POPUP -->
+ <div class="popup" id="popup">
+    <div class="popup-content">
+      <p id="popup-message"></p>
+      <button id="closePopup">Okay!</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+   <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>ChooChips Co.</h2>
+        <p>Est. 2025</p>
+      </div>
+
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="baked.html">Freshly Baked</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="custom.html">Custom Orders</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+      
+      <div class="footer-contacts">
+        <div class="contact-item">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+          <span>@cookiecrazy.choochips</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://filbertway.com/wp-content/uploads/2023/12/new-twitter-logo-x-2023-twitter-x-logo-vector-download_691560-10794.webp" alt="X">
+          <span>@cookiecrazy.choochips</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+          <span>ChooChips Co.</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pinterest.svg" alt="Pinterest">
+          <span>ChooChipsCo.</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
+          <span>cookiecrazy@choochips.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ChooChips Co. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- External JS -->
+  <script src="sugar.js?v=3"></script>
+
+  <!-- Internal JS-->
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  localStorage.removeItem("sugarBoxSize");
+  localStorage.removeItem("sugarBoxPrice");
+
+  Object.keys(localStorage).forEach(key => {
+    if (key.startsWith("sugar-") || key.startsWith("sugar-checkbox-")) {
+      localStorage.removeItem(key);
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>
